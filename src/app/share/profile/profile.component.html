@@ -1,0 +1,28 @@
+<div class="position">
+    <router-outlet></router-outlet>
+    <img src="assets/images/title.png">
+    <hr>
+
+
+    <div>
+        <pre *ngIf="auth.user$ | async as user">
+    <font color="#67B5BB"><h2 style="text-align: center">{{user.given_name}}'s Account</h2></font>
+    <font color="#787977"><h4>Full Name: {{user.given_name}} {{user.family_name}}</h4>
+    <h4>Nickname: {{user.nickname}}</h4>
+    <h4>Locale: {{user.locale}}</h4>
+    <h4>Email: {{user.email}}</h4>
+    <h4>Current Plan: Enterprise Edition </h4>
+    <h4>Change plan: <input type="button" routerLink="/price"  class="btn btn-info" value="CHANGE"> </h4>
+    </font>   
+   
+     </pre>
+
+     
+         <h1>Please login</h1>
+     
+    </div>
+
+
+
+
+</div>
